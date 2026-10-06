@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa en alquiler para eventos y descanso</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6ec;--card:#fff;--text:#2a1b12;--muted:#6f5a49;--a:#ff5a1f;--b:#00b4c5;--c:#ffc400;--p:#7b2ff7;--line:#ffe0c2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150f1f;--card:#231a33;--text:#fbf1e6;--muted:#c3b3a3;--line:#3b2d52}}
+:root[data-theme="dark"]{--bg:#150f1f;--card:#231a33;--text:#fbf1e6;--muted:#c3b3a3;--line:#3b2d52}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;overflow-x:hidden}
+h1,h2,h3,.n{font-family:"Baloo 2","Poppins",system-ui,sans-serif}
+.hero{position:relative;text-align:center;color:#fff;padding:70px 20px 110px;background:linear-gradient(120deg,#ff5a1f,#ff2e93,#7b2ff7,#00b4c5,#ff5a1f);background-size:300% 300%;animation:bg 12s ease infinite;overflow:hidden}
+@keyframes bg{50%{background-position:100% 50%}}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
+.fl{position:absolute;font-size:2.2rem;opacity:.85;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-22px) rotate(12deg)}}
+.badge{display:inline-block;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.5);padding:6px 18px;border-radius:50px;font-weight:600;margin-bottom:14px}
+.hero h1{position:relative;font-size:clamp(2.2rem,8vw,4.2rem);line-height:1.05;margin:0 auto 12px;max-width:800px;text-shadow:0 4px 18px rgba(0,0,0,.3)}
+.hero p{position:relative;max-width:600px;margin:0 auto 24px;font-size:1.1rem}
+.btn{position:relative;display:inline-block;background:#25d366;color:#fff;font-weight:700;font-size:1.1rem;padding:16px 32px;border-radius:50px;text-decoration:none;box-shadow:0 0 0 0 rgba(37,211,102,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.stats{position:relative;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.stat{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:18px;padding:10px 18px;font-weight:600}
+.stat b{display:block;font-size:1.6rem;font-family:"Baloo 2",sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+section{margin:56px 0}
+h2{font-size:clamp(1.7rem,5vw,2.4rem);text-align:center;margin:0 0 6px}
+.sub{text-align:center;color:var(--muted);margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{background:var(--card);border:2px solid var(--line);padding:10px 18px;border-radius:50px;font-weight:600;transition:.2s}
+.chip:hover{transform:translateY(-4px) rotate(-2deg);border-color:var(--a)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:22px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:var(--a);box-shadow:0 14px 30px rgba(255,90,31,.2)}
+.ic{font-size:2.3rem;display:inline-block;background:linear-gradient(135deg,var(--c),var(--a));border-radius:16px;padding:6px 10px;margin-bottom:6px}
+.card h3{margin:4px 0;font-size:1.2rem}
+.card p,.card li{color:var(--muted);margin:2px 0;font-size:.95rem}
+.card ul{padding-left:18px;margin:6px 0}
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:520px;margin:0 auto}
+.hours .card{text-align:center}
+.hours .n{font-size:2rem;color:var(--a);font-weight:800}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+.tab{border:0;background:var(--card);color:var(--text);border:2px solid var(--line);padding:12px 24px;border-radius:50px;font-weight:700;cursor:pointer;font-size:1rem;font-family:inherit}
+.tab.on{background:linear-gradient(135deg,var(--a),#ff2e93);color:#fff;border-color:transparent;box-shadow:0 8px 20px rgba(255,46,147,.35)}
+.gh{display:inline-block;font-size:1.5rem;margin:8px 0 16px;padding:8px 22px;border-radius:50px;color:#fff;background:linear-gradient(135deg,var(--b),var(--p))}
+.gh small{font-family:"Poppins",sans-serif;font-size:.8rem;font-weight:400;margin-left:8px;opacity:.9}
+.gh2{background:linear-gradient(135deg,var(--a),#ff2e93);margin-top:36px}
+#sem,#fin{margin-bottom:6px}
+.sel{margin-top:12px;border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:.95rem;color:#fff;background:linear-gradient(135deg,var(--a),#ff2e93);padding:10px 22px;border-radius:50px}
+.sel:hover{filter:brightness(1.1)}
+.card.pick{border-color:var(--a);box-shadow:0 0 0 4px rgba(255,90,31,.25)}
+.book{background:var(--card);border:2px solid var(--line);border-radius:32px;padding:28px 22px;max-width:680px;margin:0 auto;box-shadow:0 14px 40px rgba(123,47,247,.15)}
+.book label{display:block;font-weight:600;margin:14px 0 6px}
+.book input[type=text],.book input[type=date],.book input[type=number],.book select{width:100%;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--text);font-family:inherit;font-size:1rem}
+.book input:focus,.book select:focus{outline:none;border-color:var(--a)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:14px;padding:12px;margin-top:8px;cursor:pointer;font-weight:400!important}
+.opt input{margin-top:4px;accent-color:#ff5a1f}
+.opt:has(input:checked){border-color:var(--a);background:rgba(255,90,31,.08)}
+.sum{margin-top:18px;border-radius:18px;padding:16px;background:linear-gradient(135deg,rgba(0,180,197,.12),rgba(123,47,247,.12));font-size:.97rem}
+.sum div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.sum .tot{font-family:"Baloo 2",sans-serif;font-size:1.35rem;font-weight:800;color:var(--a);border-top:2px dashed var(--line);margin-top:6px;padding-top:8px}
+.go{width:100%;margin-top:18px;border:0;cursor:pointer;font-family:inherit;font-size:1.1rem;padding:16px;border-radius:50px;animation:pulse 2s infinite}
+.go.btn{position:relative}
+.err{color:#e11d48;font-weight:600;font-size:.9rem;margin-top:8px;min-height:1.2em;text-align:center}
+@media(max-width:480px){.row{grid-template-columns:1fr}}
+.price{text-align:center}
+.price .t{font-weight:700}
+.price .n{font-size:2.6rem;font-weight:800;line-height:1.1;background:linear-gradient(135deg,var(--a),#ff2e93);-webkit-background-clip:text;background-clip:text;color:transparent;margin:4px 0}
+.price small{display:block;color:var(--muted)}
+.hal{position:relative;overflow:hidden;text-align:center;color:#fff;padding:44px 20px;border-radius:32px;background:radial-gradient(circle at 50% 0,#ff8a00,#b53a00 45%,#1a0b2e);box-shadow:0 0 40px rgba(255,120,0,.5)}
+.hal .big{font-size:4rem;animation:fl 3s ease-in-out infinite;display:block}
+.hal h2{color:#fff}
+.hal .n{font-size:3.4rem;font-weight:800;color:#ffd84d;text-shadow:0 0 20px rgba(255,200,0,.7)}
+.promo .card{border-left:8px solid var(--b)}
+.promo .card.hot{border-left-color:var(--a)}
+.tag{display:inline-block;background:var(--c);color:#2a1b12;font-weight:700;font-size:.8rem;padding:2px 12px;border-radius:50px}
+.note{text-align:center;background:var(--card);border:2px dashed var(--a);border-radius:20px;padding:14px 18px;margin-top:18px;color:var(--muted);font-size:.92rem}
+.cta{position:relative;text-align:center;color:#fff;padding:54px 20px;border-radius:36px;background:linear-gradient(135deg,#00b4c5,#7b2ff7,#ff2e93);background-size:200% 200%;animation:bg 8s ease infinite;margin-bottom:48px}
+.cta h2{color:#fff}
+.cta .btn{margin:10px 0}
+.rv{opacity:0;transform:translateY(30px);transition:.7s}
+.rv.in{opacity:1;transform:none}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;background:#25d366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.9rem;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+footer{text-align:center;color:var(--muted);padding:0 0 36px;font-size:.85rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <span class="fl" style="left:6%;top:14%">🌴</span><span class="fl" style="right:8%;top:10%;animation-delay:1s">🥳</span>
+  <span class="fl" style="left:12%;bottom:26%;animation-delay:2s">🏊‍♂️</span><span class="fl" style="right:12%;bottom:30%;animation-delay:3s">🎤</span>
+  <div class="badge">📍 Ubicación: por definir</div>
+  <h1>🏡 Hermosa casa en alquiler para eventos, reuniones y descanso</h1>
+  <p>¿Buscas un lugar amplio, cómodo y privado para disfrutar con tu familia o amigos? El espacio perfecto para celebrar o desconectarte ❤️✨</p>
+  <a class="btn" href="https://wa.me/51946877866" target="_blank" rel="noopener">📲 Reservar por WhatsApp</a>
+  <div class="stats">
+    <div class="stat"><b>16-18</b>personas</div>
+    <div class="stat"><b>5</b>habitaciones</div>
+    <div class="stat"><b>🏊‍♂️</b>piscina con velo</div>
+    <div class="stat"><b>🐶</b>mascotas OK</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="rv">
+    <h2>🎉 Ideal para</h2>
+    <p class="sub">Cualquier excusa es buena para celebrar</p>
+    <div class="chips">
+      <span class="chip">🎂 Cumpleaños y celebraciones</span><span class="chip">👨‍👩‍👧‍👦 Reuniones familiares</span><span class="chip">🥳 Reuniones con amigos</span>
+      <span class="chip">🥩 Parrilladas y piscina</span><span class="chip">🎊 Eventos especiales</span><span class="chip">🌴 Fines de semana de descanso</span>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>🏡 Características de la casa</h2>
+    <p class="sub">Todo lo que necesitas en un solo lugar</p>
+    <div class="grid">
+      <div class="card"><div class="ic">👥</div><h3>Capacidad</h3><p>Hasta 16 personas, con posibilidad de ampliar hasta 18.</p></div>
+      <div class="card"><div class="ic">🛏️</div><h3>5 habitaciones</h3><ul><li>3 con camarotes de 2 plazas en ambos niveles</li><li>2 matrimoniales</li><li>🚿 Todas con baño privado y agua caliente</li></ul></div>
+      <div class="card"><div class="ic">🛋️</div><h3>Sala amplia</h3><p>Perfecta para compartir, descansar y disfrutar en grupo.</p></div>
+      <div class="card"><div class="ic">🍳</div><h3>Cocina equipada</h3><p>Cocina con horno, barra y refrigeradora de gran capacidad.</p></div>
+      <div class="card"><div class="ic">🏊‍♂️</div><h3>Piscina amplia con velo</h3><p>Un refrescante día de piscina con familiares y amigos ☀️💦</p></div>
+      <div class="card"><div class="ic">🥩</div><h3>Zona de parrilla</h3><p>Con caja china, perfecta para deliciosas celebraciones.</p></div>
+      <div class="card"><div class="ic">🎤</div><h3>Entretenimiento</h3><p>Sistema de sonido, karaoke 🎶 y TV de 65 pulgadas 📺</p></div>
+      <div class="card"><div class="ic">⚽</div><h3>Diversión</h3><p>Mesa de futbolín / fulbito de mano.</p></div>
+      <div class="card"><div class="ic">🌿</div><h3>Áreas exteriores</h3><p>Amplio grass para juegos y reuniones al aire libre.</p></div>
+      <div class="card"><div class="ic">🚗</div><h3>Estacionamiento</h3><p>Espacio seguro para hasta 3 vehículos.</p></div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>⏰ Horarios</h2>
+    <p class="sub">Hora de llegar y hora de volver</p>
+    <div class="hours">
+      <div class="card"><div class="ic">🕐</div><h3>Ingreso</h3><div class="n">10:00 a. m.</div></div>
+      <div class="card"><div class="ic">🕔</div><h3>Salida</h3><div class="n">5:00 p. m.</div></div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>💰 Tarifas de alquiler</h2>
+    <p class="sub">Elige tu plan y separa tu fecha</p>
+    <h3 class="gh">☀️ Lunes a jueves</h3>
+    <div id="sem" class="grid">
+      <div class="card price"><div class="t">🏖️ FULL DAY</div><div class="n">S/ 800</div><small>⏰ 10:00 a. m. a 5:00 p. m.</small><small>👥 Hasta 25 personas</small></div>
+      <div class="card price"><div class="t">🌙 2 DÍAS / 1 NOCHE</div><div class="n">S/ 1,200</div><small>👥 Hasta 16 + 2 adicionales</small></div>
+      <div class="card price"><div class="t">⭐ 3 DÍAS / 2 NOCHES</div><div class="n">S/ 1,700</div></div>
+      <div class="card price"><div class="t">✨ 4 DÍAS / 3 NOCHES</div><div class="n">S/ 2,000</div></div>
+    </div>
+    <h3 class="gh gh2">🎉 Fines de semana <small>Viernes, sábado y domingo</small></h3>
+    <div id="fin" class="grid">
+      <div class="card price"><div class="t">☀️ FULL DAY</div><div class="n">S/ 1,200</div><small>⏰ 10:00 a. m. a 5:00 p. m.</small><small>👥 Hasta 25 personas</small></div>
+      <div class="card price"><div class="t">🌙 2 DÍAS / 1 NOCHE</div><div class="n">S/ 1,900</div><small>👥 Hasta 16 + 2 adicionales</small></div>
+      <div class="card price"><div class="t">⭐ 3 DÍAS / 2 NOCHES</div><div class="n">S/ 2,500</div></div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="hal">
+      <span class="big">🎃</span>
+      <h2>Promoción especial de Halloween</h2>
+      <div>📅 31 de octubre – 1 de noviembre</div>
+      <div class="n">🔥 S/ 2,500</div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2>🎁 Promociones y condiciones</h2>
+    <p class="sub">Claras y sin sorpresas</p>
+    <div class="grid promo">
+      <div class="card"><span class="tag">RESERVA</span><h3>💰 Solo con el 50%</h3><p>Separa tu fecha con la mitad del pago.</p></div>
+      <div class="card hot"><span class="tag">🔥 DESCUENTO</span><h3>S/ 200 menos</h3><p>Paga el 100% al momento de reservar y obtén S/ 200 de descuento sobre el total 💥</p></div>
+      <div class="card"><span class="tag">GARANTÍA</span><h3>🛡️ S/ 300</h3><p>Se entrega al ingresar y se devuelve al finalizar, siempre que la propiedad no presente daños.</p></div>
+      <div class="card"><span class="tag">MASCOTAS</span><h3>🐶 ¡Bienvenidas!</h3><p>Sí, tus engreídos también vienen 🐾❤️</p></div>
+      <div class="card"><span class="tag">PARRILLA</span><h3>🔥 Carbón/leña</h3><p>No incluido para caja china y parrilla.</p></div>
+    </div>
+    <div class="note">📌 <b>Importante:</b> las tarifas corresponden a reuniones y estadías familiares/sociales. Para eventos de mayor magnitud, consulta antes para una cotización personalizada.</div>
+  </section>
+
+  <section class="rv" id="reservar">
+    <h2>📝 Separa tu fecha aquí</h2>
+    <p class="sub">Elige tu plan, llena tus datos y envía tu solicitud por WhatsApp</p>
+    <div class="book">
+      <label for="plan">🏖️ Plan</label>
+      <select id="plan"></select>
+      <div class="row">
+        <div><label for="fecha">📅 Fecha de ingreso</label><input type="date" id="fecha"></div>
+        <div><label for="pers">👥 Personas</label><input type="number" id="pers" min="1" max="25" value="10"></div>
+      </div>
+      <label for="nom">🙋 Tu nombre</label>
+      <input type="text" id="nom" placeholder="Ej: María Pérez" autocomplete="name">
+      <label>💳 Forma de reserva</label>
+      <label class="opt"><input type="radio" name="pago" value="50" checked><span><b>Separar con el 50%</b><br>Paga la mitad ahora y el resto después.</span></label>
+      <label class="opt"><input type="radio" name="pago" value="100"><span><b>🔥 Pagar el 100% y ahorrar S/ 200</b><br>Descuento sobre el precio total.</span></label>
+      <div class="sum" id="sum"></div>
+      <div class="err" id="err"></div>
+      <button class="btn go" id="go" type="button" style="background:#25d366;color:#fff">📲 Enviar solicitud por WhatsApp</button>
+    </div>
+    <p class="note">Tu solicitud se confirma por WhatsApp según la disponibilidad de la fecha. La garantía de S/ 300 se entrega al ingresar.</p>
+  </section>
+
+  <section class="cta rv">
+    <h2>📅 ¡Separa tu fecha con anticipación!</h2>
+    <p>Las fechas pueden agotarse rápido, especialmente fines de semana y feriados 🔥</p>
+    <p>📸 ¿Quieres conocer más? Solicita fotos y videos de la propiedad por WhatsApp.</p>
+    <a class="btn" href="https://wa.me/51946877866" target="_blank" rel="noopener">📲 WhatsApp 946 877 866</a>
+    <p style="margin-bottom:0;font-weight:600">🏡✨ ¡Ven a disfrutar, celebrar y crear momentos inolvidables! 🥳🌴☀️ ¡TE ESPERAMOS!</p>
+  </section>
+</main>
+<footer>Página de prueba · Casa de alquiler</footer>
+<a class="wa" href="https://wa.me/51946877866" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<script>
+var plans=[],sel=document.getElementById('plan');
+function money(n){return 'S/ '+n.toLocaleString('en-US')}
+function addPlan(name,price,card){plans.push({name:name,price:price});var o=document.createElement('option');o.value=plans.length-1;o.textContent=name+' — '+money(price);sel.appendChild(o);return plans.length-1}
+[['sem','Lunes a jueves'],['fin','Fin de semana']].forEach(function(g){
+  document.querySelectorAll('#'+g[0]+' .card').forEach(function(c){
+    var t=c.querySelector('.t').textContent.replace(/^\S+\s/,'').trim();
+    var pr=parseInt(c.querySelector('.n').textContent.replace(/\D/g,''),10);
+    var i=addPlan(g[1]+': '+t,pr);
+    var b=document.createElement('button');b.type='button';b.className='sel';b.textContent='✅ Elegir este plan';
+    b.addEventListener('click',function(){sel.value=i;upd();document.querySelectorAll('.card.pick').forEach(function(x){x.classList.remove('pick')});c.classList.add('pick');document.getElementById('reservar').scrollIntoView({behavior:'smooth'})});
+    c.appendChild(b);
+  });
+});
+var hi=addPlan('🎃 Halloween (31 oct – 1 nov)',2500);
+var hb=document.createElement('button');hb.type='button';hb.className='sel';hb.textContent='🎃 Reservar Halloween';hb.style.background='#ffd84d';hb.style.color='#2a1b12';
+hb.addEventListener('click',function(){sel.value=hi;document.getElementById('fecha').value='2026-10-31';upd();document.getElementById('reservar').scrollIntoView({behavior:'smooth'})});
+document.querySelector('.hal').appendChild(hb);
+var f=document.getElementById('fecha');var d=new Date();f.min=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function calc(){var p=plans[sel.value],tot=p.price,m=document.querySelector('input[name=pago]:checked').value;
+  var pay=m==='100'?tot-200:Math.round(tot/2);return {p:p,tot:tot,m:m,pay:pay}}
+function upd(){var c=calc();var h='<div><span>Plan</span><b>'+c.p.name+'</b></div><div><span>Precio total</span><b>'+money(c.tot)+'</b></div>';
+  if(c.m==='100')h+='<div><span>Descuento 100%</span><b>− S/ 200</b></div><div class="tot"><span>Total a pagar</span><span>'+money(c.pay)+'</span></div>';
+  else h+='<div class="tot"><span>Pagas hoy (50%)</span><span>'+money(c.pay)+'</span></div><div><span>Saldo pendiente</span><b>'+money(c.tot-c.pay)+'</b></div>';
+  h+='<div><span>Garantía al ingresar</span><b>S/ 300</b></div>';document.getElementById('sum').innerHTML=h}
+sel.addEventListener('change',upd);document.querySelectorAll('input[name=pago]').forEach(function(r){r.addEventListener('change',upd)});upd();
+document.getElementById('go').addEventListener('click',function(){
+  var nom=document.getElementById('nom').value.trim(),fe=f.value,pe=document.getElementById('pers').value,e=document.getElementById('err');
+  if(!nom){e.textContent='Escribe tu nombre 🙋';return}if(!fe){e.textContent='Elige la fecha de ingreso 📅';return}
+  e.textContent='';var c=calc(),fd=fe.split('-').reverse().join('/');
+  var msg='¡Hola! Quiero separar la casa 🏡%0A%0A👤 Nombre: '+encodeURIComponent(nom)+'%0A📦 Plan: '+encodeURIComponent(c.p.name)+'%0A📅 Fecha de ingreso: '+fd+'%0A👥 Personas: '+pe+'%0A💰 Total: '+encodeURIComponent(money(c.tot))+'%0A💳 Forma de reserva: '+(c.m==='100'?encodeURIComponent('100% (con S/ 200 de descuento) = '+money(c.pay)):encodeURIComponent('50% = '+money(c.pay)))+'%0A%0A¿Está disponible esa fecha?';
+  window.open('https://wa.me/51946877866?text='+msg,'_blank');
+});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
